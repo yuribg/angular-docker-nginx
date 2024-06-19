@@ -10,8 +10,16 @@ npx @angular/cli@16 new angular-docker-nginx --routing true --style css
 Do everything inside angular app folder.
 
 ```
-cd angular-docker-app
+cd angular-docker-nginx
 ```
+
+Check if app is running using 
+
+```
+ng serve
+```
+
+And listen on default port 4200.
 
 # 2. Create and edit Dockerfile.
 
@@ -42,7 +50,7 @@ docker build -t angular-docker .
 # 4. Run Docker container.
 
 ```
-docker run -d -p 80:4200 --name angular-docker-app angular-docker-app
+docker run -d -p 80:4200 --name angular-docker-nginx angular-docker-nginx
 ```
 
 # 5. Open app in port 80.
