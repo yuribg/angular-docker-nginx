@@ -96,7 +96,7 @@ docker push yuribg/angular-docker-nginx-image:latest
 # 7. Deploy to GitHub Pages:
 
 ```
-ng build --configuration=production --base-href=/angular-docker-nginx/
+ng build --configuration=production --base-href=https://yuribg.github.io/angular-docker-nginx/
 ```
 
 Source:
