@@ -93,5 +93,11 @@ docker login -u <username> -p <password>
 docker push yuribg/angular-docker-nginx-image:latest
 ```
 
+# 7. Deploy to GitHub Pages:
+
+```
+ng build --configuration=production --base-href=/angular-docker-nginx/
+```
+
 Source:
 [HOW TO DOCKERIZE AN ANGULAR APPLICATION WITH NGINX](https://levioconsulting.com/insights/how-to-dockerize-an-angular-application-with-nginx/)
