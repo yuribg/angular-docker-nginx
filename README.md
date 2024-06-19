@@ -1,4 +1,6 @@
-# 1. Create Angular app with @angular/cli v16.
+# Create Angular app, dockerize and publish to GitHub Pages
+
+## 1. Create Angular app with @angular/cli v16.
 - Server-side rendering (SSR) disabled,
 - route file enabled, 
 - CSS style format.
@@ -21,7 +23,7 @@ ng serve
 
 And listen on default port 4200.
 
-# 2. Create and edit Dockerfile.
+## 2. Create and edit Dockerfile.
 
 ```
 touch Dockerfile
@@ -58,7 +60,7 @@ COPY --from=build /usr/local/app/dist/angular-docker-nginx /usr/share/nginx/html
 EXPOSE 80
 ```
 
-# 3. Create Docker image.
+## 3. Create Docker image.
 
 ```
 docker build -t yuribg/angular-docker-nginx-image:latest  .
@@ -70,7 +72,7 @@ Check docker image created.
 docker image ls
 ```
 
-# 4. Run Docker container.
+## 4. Run Docker container.
 
 ```
 docker run -d -p 8080:80 --name angular-docker-nginx yuribg/angular-docker-nginx-image:latest
@@ -82,18 +84,18 @@ Check docker container running.
 docker ps
 ```
 
-# 5. Open app in port 8080.
+## 5. Open app in port 8080.
 
 [localhost:8080](http://localhost:8080/)
 
-# 6. Post image to DockerHub.
+## 6. Post image to DockerHub.
 
 ```
 docker login -u <username> -p <password>
 docker push yuribg/angular-docker-nginx-image:latest
 ```
 
-# 7. Deploy to GitHub Pages:
+## 7. Deploy to GitHub Pages:
 
 Check base href on build:
 
